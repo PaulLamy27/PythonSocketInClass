@@ -4,6 +4,7 @@ serverPort = 12000
 # 2nd param: UDP socket
 serverSocket = socket(AF_INET, SOCK_DGRAM)
 serverSocket.bind(('', serverPort))
+serverSocket.settimeout(10)
 print('The server is ready to receive')
 while True:
     message, clientAddress = serverSocket.recvfrom(2048)

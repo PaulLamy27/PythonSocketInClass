@@ -14,6 +14,8 @@ serverSocket.bind(("",serverPort))
 # and arrives at the socket 
 serverSocket.listen(1)
 
+serverSocket.settimeout(10)
+
 print("The server is ready to receive")
 
 # waiting for the client to request
